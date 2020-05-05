@@ -1,0 +1,24 @@
+<% if flash[:errors] %>
+    <% flash[:errors].each do |error| %>
+    <%= error %>
+    <% end %>
+<% end %>
+
+<h1>Sign Up</h1>
+
+<%= form_for @user do |f| %>
+    <%=f.label :name %>
+    <%=f.text_field :name %>
+
+    <%=f.label :password %>
+    <%=f.text_field :password %>
+
+    <%=f.label :age %>
+    <%=f.number_field :age %>
+
+    <%=f.label :reason_for_visiting %>
+    <%=f.text_field :reason_for_visiting %>
+    
+    <%=f.submit "Create My Profile" %>
+
+<% end %>
