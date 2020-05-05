@@ -1,0 +1,9 @@
+<h1><%= @drink.name %></h1>
+
+<p><%= "#{@drink.likes} people like this." %></p>
+
+<h2>Recipe</h2>
+
+<% Drink.all.each do |drink| %>
+    <p><%= drink.recipe %></p>
+  <% end %>
