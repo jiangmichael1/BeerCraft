@@ -1,0 +1,6 @@
+<h1> Products Index </h1>
+<% @products.each do |p| %>
+    <h3><%= link_to p.name, product_path(p) %></h3>
+    <p><%= p.price%></p>
+    <br>
+<% end %>
