@@ -3,8 +3,14 @@ Rails.application.routes.draw do
   resources :drinks
   resources :users
   resources :products
-  resources :user_drinks
+  resources :user_drinks do
+    resources :drinks
+  end
+    resources :users
+
   resources :product_drinks
   resources :user_products
 
+
 end
+

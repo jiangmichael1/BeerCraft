@@ -8,7 +8,8 @@ end
 def create
 @user = User.new(user_params)
 if @user.save
-    redirect_to user_path(@user.id)
+    session[:user_id] = @user.id
+    redirect_to user_path(@user)
 else
     flash[:errors] = @user.errors.full_messages
     redirect_to new_user_path
@@ -23,7 +24,7 @@ end
 private
 
 def user_params
-params.require(:user).permit(:name, :age, :reason_for_visiting)
+params.require(:user).permit(:name, :age, :password, :reason_for_visiting)
 end
 
 def find_user
