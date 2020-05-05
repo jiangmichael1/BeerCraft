@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :user_drinks
   resources :product_drinks
   resources :user_products
+
 end
