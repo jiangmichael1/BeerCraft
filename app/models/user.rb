@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
     validates :age, numericality: {greater_than_or_equal_to: 21}
     validates :name, presence: true
+    validates :name, uniqueness: true
 
     def my_drinks
         mydrinks = UserDrink.find_by(user_id: self)

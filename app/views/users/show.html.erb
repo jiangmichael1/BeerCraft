@@ -5,8 +5,10 @@
 
 
 <h2>My Drinks</h2>
-<p><%= @user.my_drinks %></p>
+<p><%= link_to @user.my_drinks, drink_path(@user.drinks.each {|d| d.id}) %></p>
 
 
 <h2>My Shopping Cart</h2>
-<p><%= @user.my_cart %></p>
+<p><%= link_to @user.my_cart, product_path(@user.products.each {|p| p.id}) %></p>
+
+<%= link_to "Users List", users_path%>
