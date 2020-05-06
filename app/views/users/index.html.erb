@@ -1,4 +1,6 @@
-<h1>Users</h1>
+<h1>Users List</h1>
+<%= link_to "Drink's List", drinks_path%> -- <%= link_to "Product's List", products_path%>
+
 <% @users.each do |u| %>
-<h3><%= link_to u.name, user_path(u)%></h3>
+    <h3><%= link_to u.name, user_path(u)%></h3>
 <% end %>
