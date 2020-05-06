@@ -12,5 +12,7 @@
 
 <h2>My Shopping Cart</h2>
     <% @user.my_cart.each do |userproduct| %>
-    <p><%= "#{userproduct.product.name}: $#{userproduct.product.price}" %></p>
+    <p><%= link_to "#{userproduct.product.name}: $#{userproduct.product.price}" ,product_path(userproduct.product.id)%></p>
     <% end %>
+<br>
+<%= link_to "Back to User's List", users_path%>

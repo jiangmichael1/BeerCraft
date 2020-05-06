@@ -1,5 +1,8 @@
 class ProductsController < ApplicationController
     
+    def index
+        @products = Product.all
+    end
 
     
     
@@ -10,5 +13,9 @@ class ProductsController < ApplicationController
         end
     end
 
+    def add_to_cart
+        @product = Product.find(params[:id])
+        @current_cart << @product.id
+    end
 
 end
