@@ -1,16 +1,16 @@
-<h1>My Profile</h1>
+<h1><%="#{@user.name}'s Profile" %></h1>
 
 <p><%= @user.name %></p>
 <p><%= @user.age %></p>
 
 
-<h2>My Drinks</h2>
+<h2>Saved Drinks</h2>
 <% @user.my_drinks.each do |mine| %>
     <p><%= link_to mine.drink.name, drink_path(mine.drink.id)%></p>
   <% end %>
 
 
-<h2>My Shopping Cart</h2>
+<h2>Shopping List</h2>
     <% @user.my_cart.each do |userproduct| %>
     <p><%= link_to "#{userproduct.product.name}: $#{userproduct.product.price}" ,product_path(userproduct.product.id)%></p>
     <% end %>
