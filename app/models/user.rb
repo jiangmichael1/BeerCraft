@@ -4,12 +4,15 @@ class User < ApplicationRecord
     has_many :user_drinks
     has_many :drinks, through: :user_drinks
     has_many :product_drinks
+    has_many :likes, dependent: :destroy
     has_secure_password
 
 
     validates :age, numericality: {greater_than_or_equal_to: 21}
     validates :name, presence: true
     validates :name, uniqueness: true
+
+
 
     def my_drinks
     @mine = UserDrink.where(user_id: self.id)
@@ -26,5 +29,6 @@ class User < ApplicationRecord
           userproduct.product.name
       end
     end
+
 
 end

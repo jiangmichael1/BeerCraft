@@ -10,14 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_05_191601) do
+ActiveRecord::Schema.define(version: 2020_05_06_191323) do
 
   create_table "drinks", force: :cascade do |t|
     t.string "name"
     t.text "recipe"
-    t.integer "likes"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "likes", force: :cascade do |t|
+    t.integer "drink_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["drink_id"], name: "index_likes_on_drink_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
   create_table "product_drinks", force: :cascade do |t|
@@ -58,4 +66,6 @@ ActiveRecord::Schema.define(version: 2020_05_05_191601) do
     t.string "password_digest"
   end
 
+  add_foreign_key "likes", "drinks"
+  add_foreign_key "likes", "users"
 end
