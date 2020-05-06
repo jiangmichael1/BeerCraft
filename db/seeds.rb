@@ -12,6 +12,7 @@ Product.destroy_all
 UserProduct.destroy_all
 UserDrink.destroy_all
 ProductDrink.destroy_all
+Like.destroy_all
 
 reasons = ['Bartender', 'Hobby', 'Shopping']
 type = ['glassware', 'garnish', 'accessory', 'alcohol']
@@ -21,7 +22,7 @@ type = ['glassware', 'garnish', 'accessory', 'alcohol']
 end
 
 20.times do
-    Drink.create(name: Faker::Beer.name, recipe: Faker::Beer.hop, likes: rand(0..100))
+    Drink.create(name: Faker::Beer.name, recipe: Faker::Beer.hop)
 end
 
 20.times do
@@ -38,6 +39,10 @@ end
 
 50.times do 
     UserDrink.create(user_id: User.all.sample.id, drink_id: Drink.all.sample.id)
+end
+
+50.times do 
+    Like.create(user_id: User.all.sample.id, drink_id: Drink.all.sample.id)
 end
 
 puts "Seeds generated!"
