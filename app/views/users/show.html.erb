@@ -6,7 +6,7 @@
 
 <h2>My Drinks</h2>
 <% @user.my_drinks.each do |mine| %>
-    <p><%= link_to mine.drink.name, drinks_path%></p>
+    <p><%= link_to mine.drink.name, drink_path(mine.drink.id)%></p>
   <% end %>
 
 
