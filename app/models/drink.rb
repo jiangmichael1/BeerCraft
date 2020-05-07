@@ -4,7 +4,7 @@ class Drink < ApplicationRecord
     has_many :product_drinks
     has_many :products, through: :product_drinks
     has_many :users, through: :product_drinks
-    has_many :likes, dependent: :destroy
+    acts_as_votable
 
     validates :recipe, :name, presence: true
   
