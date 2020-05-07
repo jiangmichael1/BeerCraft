@@ -31857,3 +31857,231 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 84ms (Views: 64.3ms | ActiveRecord: 0.6ms | Allocations: 6872)
 
 
+Started GET "/users" for ::1 at 2020-05-07 16:00:35 -0400
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_user'
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:4
+  Rendered users/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 1911)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 158ms (Views: 99.9ms | ActiveRecord: 2.8ms | Allocations: 25395)
+
+
+Started GET "/users" for ::1 at 2020-05-07 16:00:38 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_user'
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:4
+  Rendered users/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1575)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 35.4ms | ActiveRecord: 0.8ms | Allocations: 6594)
+
+
+Started GET "/users/new" for ::1 at 2020-05-07 16:00:43 -0400
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_user'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 21.4ms | Allocations: 3173)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 35.7ms | ActiveRecord: 0.2ms | Allocations: 8348)
+
+
+Started POST "/users" for ::1 at 2020-05-07 16:00:53 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"hEMV7JzaJU/vAU6v3gbpaBfKcDXJg5vs8itE93rYEs934Lliq/+GsHRy9yoK9ZNSWyDHwF5aPqih2ubVPfu0hA==", "user"=>{"name"=>"fbdg", "password"=>"[FILTERED]", "age"=>"33", "reason_for_visiting"=>"fun"}, "commit"=>"Create My Profile"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_user'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "fbdg"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "age", "reason_for_visiting", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "fbdg"], ["age", 33], ["reason_for_visiting", "fun"], ["created_at", "2020-05-07 20:00:54.090730"], ["updated_at", "2020-05-07 20:00:54.090730"], ["password_digest", "$2a$12$ot7rH0Xdi5qeuzCMKObpN.mj8hrnyomrZAw82bQLRvLtl7WQDbn6u"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+Redirected to http://localhost:3000/users/26
+Completed 302 Found in 295ms (ActiveRecord: 2.3ms | Allocations: 4828)
+
+
+Started GET "/users/26" for ::1 at 2020-05-07 16:00:54 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35:in `find_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUserDrink Load (1.4ms)[0m  [1m[34mSELECT "user_drinks".* FROM "user_drinks" WHERE "user_drinks"."user_id" = ?[0m  [["user_id", 26]]
+  ↳ app/models/user.rb:16:in `my_drinks'
+  [1m[36mActsAsVotable::Vote Load (1.0ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."vote_flag" = ? AND "votes"."voter_id" = ? AND "votes"."voter_type" = ?[0m  [["vote_flag", 1], ["voter_id", 26], ["voter_type", "User"]]
+  ↳ app/models/user.rb:21:in `votedfor'
+  [1m[36mDrink Load (0.7ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks"[0m
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mUserProduct Load (0.7ms)[0m  [1m[34mSELECT "user_products".* FROM "user_products" WHERE "user_products"."user_id" = ?[0m  [["user_id", 26]]
+  ↳ app/models/user.rb:27:in `my_cart'
+  Rendered users/show.html.erb within layouts/application (Duration: 94.3ms | Allocations: 13210)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 146ms (Views: 128.8ms | ActiveRecord: 6.5ms | Allocations: 18918)
+
+
+Started GET "/drinks/26" for ::1 at 2020-05-07 16:00:57 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_user'
+  [1m[36mDrink Load (0.3ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/drinks_controller.rb:51:in `find_drink'
+Completed 404 Not Found in 12ms (ActiveRecord: 0.6ms | Allocations: 1834)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Drink with 'id'=26):
+  
+app/controllers/drinks_controller.rb:51:in `find_drink'
+Started GET "/users/26" for ::1 at 2020-05-07 16:01:00 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35:in `find_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUserDrink Load (0.2ms)[0m  [1m[34mSELECT "user_drinks".* FROM "user_drinks" WHERE "user_drinks"."user_id" = ?[0m  [["user_id", 26]]
+  ↳ app/models/user.rb:16:in `my_drinks'
+  [1m[36mActsAsVotable::Vote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."vote_flag" = ? AND "votes"."voter_id" = ? AND "votes"."voter_type" = ?[0m  [["vote_flag", 1], ["voter_id", 26], ["voter_type", "User"]]
+  ↳ app/models/user.rb:21:in `votedfor'
+  [1m[36mDrink Load (0.6ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks"[0m
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mUserProduct Load (0.2ms)[0m  [1m[34mSELECT "user_products".* FROM "user_products" WHERE "user_products"."user_id" = ?[0m  [["user_id", 26]]
+  ↳ app/models/user.rb:27:in `my_cart'
+  Rendered users/show.html.erb within layouts/application (Duration: 64.4ms | Allocations: 2928)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 103ms (Views: 96.4ms | ActiveRecord: 1.8ms | Allocations: 8477)
+
+
+Started GET "/drinks/26" for ::1 at 2020-05-07 16:01:04 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_user'
+  [1m[36mDrink Load (0.2ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/drinks_controller.rb:51:in `find_drink'
+Completed 404 Not Found in 13ms (ActiveRecord: 0.5ms | Allocations: 1673)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Drink with 'id'=26):
+  
+app/controllers/drinks_controller.rb:51:in `find_drink'
+Started GET "/users/26" for ::1 at 2020-05-07 16:01:08 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35:in `find_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUserDrink Load (0.2ms)[0m  [1m[34mSELECT "user_drinks".* FROM "user_drinks" WHERE "user_drinks"."user_id" = ?[0m  [["user_id", 26]]
+  ↳ app/models/user.rb:16:in `my_drinks'
+  [1m[36mActsAsVotable::Vote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."vote_flag" = ? AND "votes"."voter_id" = ? AND "votes"."voter_type" = ?[0m  [["vote_flag", 1], ["voter_id", 26], ["voter_type", "User"]]
+  ↳ app/models/user.rb:21:in `votedfor'
+  [1m[36mDrink Load (0.4ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks"[0m
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mUserProduct Load (0.5ms)[0m  [1m[34mSELECT "user_products".* FROM "user_products" WHERE "user_products"."user_id" = ?[0m  [["user_id", 26]]
+  ↳ app/models/user.rb:27:in `my_cart'
+  Rendered users/show.html.erb within layouts/application (Duration: 11.3ms | Allocations: 2903)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 43.5ms | ActiveRecord: 1.7ms | Allocations: 8389)
+
+
+Started GET "/drinks/26" for ::1 at 2020-05-07 16:01:13 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_user'
+  [1m[36mDrink Load (0.2ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/drinks_controller.rb:51:in `find_drink'
+Completed 404 Not Found in 8ms (ActiveRecord: 0.6ms | Allocations: 1673)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Drink with 'id'=26):
+  
+app/controllers/drinks_controller.rb:51:in `find_drink'
+Started GET "/users/26" for ::1 at 2020-05-07 16:01:17 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35:in `find_user'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUserDrink Load (0.3ms)[0m  [1m[34mSELECT "user_drinks".* FROM "user_drinks" WHERE "user_drinks"."user_id" = ?[0m  [["user_id", 26]]
+  ↳ app/models/user.rb:16:in `my_drinks'
+  [1m[36mActsAsVotable::Vote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."vote_flag" = ? AND "votes"."voter_id" = ? AND "votes"."voter_type" = ?[0m  [["vote_flag", 1], ["voter_id", 26], ["voter_type", "User"]]
+  ↳ app/models/user.rb:21:in `votedfor'
+  [1m[36mDrink Load (0.6ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks"[0m
+  ↳ app/views/users/show.html.erb:15
+  [1m[36mUserProduct Load (4.0ms)[0m  [1m[34mSELECT "user_products".* FROM "user_products" WHERE "user_products"."user_id" = ?[0m  [["user_id", 26]]
+  ↳ app/models/user.rb:27:in `my_cart'
+  Rendered users/show.html.erb within layouts/application (Duration: 65.9ms | Allocations: 2905)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 132ms (Views: 118.0ms | ActiveRecord: 5.7ms | Allocations: 8394)
+
+
+Started GET "/products" for ::1 at 2020-05-07 16:01:26 -0400
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_user'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  Rendered products/index.html.erb within layouts/application (Duration: 30.0ms | Allocations: 5944)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 93ms (Views: 65.5ms | ActiveRecord: 3.0ms | Allocations: 14199)
+
+
+Started GET "/products/142" for ::1 at 2020-05-07 16:01:28 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"142"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_user'
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 142], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:30:in `find_product'
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 142], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:9:in `show'
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 184)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 35.1ms | ActiveRecord: 1.8ms | Allocations: 6390)
+
+
+Started GET "/products" for ::1 at 2020-05-07 16:01:30 -0400
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_user'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  Rendered products/index.html.erb within layouts/application (Duration: 9.4ms | Allocations: 1935)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 38.0ms | ActiveRecord: 1.9ms | Allocations: 6936)
+
+
+Started GET "/sessions/login" for ::1 at 2020-05-07 16:01:41 -0400
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_user'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1572)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 50.1ms | ActiveRecord: 0.3ms | Allocations: 7172)
+
+
