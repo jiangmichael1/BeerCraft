@@ -4,11 +4,11 @@
 <p><%= @user.age %></p>
 
 
-<h2>Saved Drinks</h2>
+<h2>Liked Drinks</h2>
 <% if @user.my_drinks.empty? %>
 <p><%= "You haven't saved any drinks yet." %></p>
 <% else %>
-<% @user.my_drinks.each do |mine| %>
+<% @user.votes_for.each do |mine| %>
     <p><%= link_to mine.drink.name, drink_path(mine.drink.id)%></p>
   <% end %>
   <% end %>
