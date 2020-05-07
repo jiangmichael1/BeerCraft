@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  resources :drinks do
-    resources :likes
-  end
+  resources :drinks 
   
+  resources :drinks do
+      member do
+        put 'like', to: 'drinks#upvote'
+        put 'unlike', to: 'drinks#downvote'
+  end
+end
   resources :users
   resources :products
   
@@ -15,9 +19,12 @@ Rails.application.routes.draw do
   resources :product_drinks
   resources :user_products
   
-  get '/login' to, to: 'sessions#new'
-  post '/login' to, to: 'sessions#create'
-  delete '/logout' to, to: 'sessions#destroy'
+  get '/sessions/login', to: 'sessions#new', as: "new_login"
+  post '/sessions/login', to: 'sessions#create'
+  delete '/sessions/logout', to: 'sessions#destroy', as: "log_out_session"
+  get '/products/[:id]/add', to: 'carts#add_item', as: "add"
+  
+
 
 end
 

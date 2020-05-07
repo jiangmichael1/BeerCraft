@@ -1,9 +1,9 @@
 <h1><%= @drink.name %></h1>
 
 
-<p><%= @drink.likes.count %>
-<%= (@drink.likes.count) == 1 ? 'Like' : 'Likes' %></p>
-<%= button_to 'Like', drink_likes_path(@drink), method: :post %>
+<p><%= @drink.votes_for.size %>
+<%= (@drink.votes_for.size) == 1 ? 'Like' : 'Likes' %></p>
+<%= button_to 'Like', like_drink_path(@drink), method: :put %>
 
 <h2>Recipe</h2>
 

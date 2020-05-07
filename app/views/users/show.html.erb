@@ -5,14 +5,24 @@
 
 
 <h2>Saved Drinks</h2>
+<% if @user.my_drinks.empty? %>
+<p><%= "You haven't saved any drinks yet." %></p>
+<% else %>
 <% @user.my_drinks.each do |mine| %>
     <p><%= link_to mine.drink.name, drink_path(mine.drink.id)%></p>
+  <% end %>
   <% end %>
 
 
 <h2>Shopping List</h2>
-    <% @user.my_cart.each do |userproduct| %>
-    <p><%= link_to "#{userproduct.product.name}: $#{userproduct.product.price}" ,product_path(userproduct.product.id)%></p>
+    
+    <% if @user.my_cart.empty? %>
+    <p><%= "Your list is empty!" %></p>
+    <% else %>
+      <% @user.my_cart.each do |userproduct| %>
+      <p><%= link_to "#{userproduct.product.name}: $#{userproduct.product.price}", product_path(userproduct.product.id)%></p>
+
+    <% end %>
     <% end %>
 <br>
-<%= link_to "Back to User's List", users_path%>
+<%= link_to "View Users", users_path%> -- <%= link_to "View Products", products_path%>--<%= link_to "View Drinks", drinks_path%>
