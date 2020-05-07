@@ -5,14 +5,15 @@
 
 
 <h2>Liked Drinks</h2>
-<% if @user.my_drinks.empty? %>
-<p><%= "You haven't saved any drinks yet." %></p>
-<% else %>
-<% @user.votes_for.each do |mine| %>
-    <p><%= link_to mine.drink.name, drink_path(mine.drink.id)%></p>
-  <% end %>
-  <% end %>
 
+  <% if @user.my_drinks.empty? %>
+      <p><%= "You haven't saved any drinks yet." %></p>
+        <% else %>
+      <% @user.votedfor.each do |mine| %>
+      <p><%= link_to mine.name, drink_path(mine.id)%></p>
+    <% end %>
+  <p><%= link_to Drink.all.sample.name, drink_path%></p>
+  <% end %>
 
 <h2>Shopping List</h2>
     

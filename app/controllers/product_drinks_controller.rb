@@ -7,11 +7,6 @@ class ProductDrinksController < ApplicationController
     @product_drinks = ProductDrink.new
     end
 
-
-
-
-    
-    
     private
     
     def product_drink_params

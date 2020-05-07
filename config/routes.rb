@@ -22,7 +22,7 @@ end
   get '/sessions/login', to: 'sessions#new', as: "new_login"
   post '/sessions/login', to: 'sessions#create'
   delete '/sessions/logout', to: 'sessions#destroy', as: "log_out_session"
-  get '/products/[:id]/add', to: 'carts#add_item', as: "add"
+  get '/products/:id/add', to: 'products#add_to_cart', as: "add"
   
 
 
