@@ -10,22 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_07_001956) do
+ActiveRecord::Schema.define(version: 2020_05_07_181717) do
 
   create_table "drinks", force: :cascade do |t|
     t.string "name"
     t.text "recipe"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "likes", force: :cascade do |t|
-    t.integer "drink_id", null: false
-    t.integer "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["drink_id"], name: "index_likes_on_drink_id"
-    t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
   create_table "product_drinks", force: :cascade do |t|
@@ -41,6 +32,27 @@ ActiveRecord::Schema.define(version: 2020_05_07_001956) do
     t.float "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "shopping_cart_items", force: :cascade do |t|
+    t.integer "owner_id"
+    t.string "owner_type"
+    t.integer "quantity"
+    t.integer "item_id"
+    t.string "item_type"
+    t.integer "price_cents", default: 0, null: false
+    t.string "price_currency", default: "USD", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "shopping_carts", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "tables", force: :cascade do |t|
+    t.string "shopping_cart_items"
   end
 
   create_table "user_drinks", force: :cascade do |t|
@@ -82,6 +94,4 @@ ActiveRecord::Schema.define(version: 2020_05_07_001956) do
     t.index ["voter_type", "voter_id"], name: "index_votes_on_voter_type_and_voter_id"
   end
 
-  add_foreign_key "likes", "drinks"
-  add_foreign_key "likes", "users"
 end

@@ -2,6 +2,7 @@
 <br>
     <h1 style="text-align: center"> Products Index </h1>
 
+<<<<<<< HEAD
     <div class="index-container">
         <% @products.each do |p| %>
             <div class="index-tile">
@@ -12,3 +13,13 @@
         <% end %>
     </div>
 </div>
+=======
+<% @products.each do |p| %>
+
+
+    <h3><%= link_to p.name, product_path(p) %></h3>
+    <p><%= p.price%></p>
+        <%= link_to "Add to cart", add_path(p) %>
+
+<% end %>
+>>>>>>> 0471071beec38b21bdd2d453f8cf981c15f79ab2

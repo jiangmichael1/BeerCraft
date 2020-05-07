@@ -16,13 +16,17 @@ class User < ApplicationRecord
     @mine.all.each do |userdrink|
         userdrink.drink.name
     end
+
+    def votedfor
+    @drinks = self.find_up_voted_items
+    end
     end
 
     def my_cart
-      @myproducts = UserProduct.where(user_id: self.id)
-      @myproducts.all.each do |userproduct|
-          userproduct.product.name
-      end
+        @myproducts = UserProduct.where(user_id: self.id)
+        @myproducts.all.each do |userproduct|
+            userproduct.product.name
+        end
     end
 
 
