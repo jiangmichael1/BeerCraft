@@ -1,5 +1,5 @@
-current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/sqlite3-1.4.2/ext/sqlite3
-/Users/jiams/.rvm/rubies/ruby-2.6.1/bin/ruby -I /Users/jiams/.rvm/rubies/ruby-2.6.1/lib/ruby/site_ruby/2.6.0 -r ./siteconf20200504-42269-l589ej.rb extconf.rb
+current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/sqlite3-1.4.2/ext/sqlite3
+/Users/jiams/.rvm/rubies/ruby-2.6.1/bin/ruby -I /Users/jiams/.rvm/rubies/ruby-2.6.1/lib/ruby/site_ruby/2.6.0 -r ./siteconf20200507-94743-1n60508.rb extconf.rb
 checking for sqlite3.h... yes
 checking for pthread_create() in -lpthread... yes
 checking for -ldl... yes
@@ -17,10 +17,10 @@ checking for sqlite3_int64 in sqlite3.h... yes
 checking for sqlite3_uint64 in sqlite3.h... yes
 creating Makefile
 
-current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/sqlite3-1.4.2/ext/sqlite3
+current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/sqlite3-1.4.2/ext/sqlite3
 make "DESTDIR=" clean
 
-current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/sqlite3-1.4.2/ext/sqlite3
+current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/sqlite3-1.4.2/ext/sqlite3
 make "DESTDIR="
 compiling aggregator.c
 compiling backup.c
@@ -58,6 +58,6 @@ compiling sqlite3.c
 compiling statement.c
 linking shared-object sqlite3/sqlite3_native.bundle
 
-current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/sqlite3-1.4.2/ext/sqlite3
+current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/sqlite3-1.4.2/ext/sqlite3
 make "DESTDIR=" install
-/usr/local/opt/coreutils/bin/ginstall -c -m 0755 sqlite3_native.bundle ./.gem.20200504-42269-5d9hxz/sqlite3
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 sqlite3_native.bundle ./.gem.20200507-94743-1pyxeql/sqlite3

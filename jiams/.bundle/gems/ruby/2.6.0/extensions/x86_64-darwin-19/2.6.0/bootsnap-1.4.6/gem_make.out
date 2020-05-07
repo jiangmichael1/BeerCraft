@@ -1,15 +1,15 @@
-current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/bootsnap-1.4.6/ext/bootsnap
-/Users/jiams/.rvm/rubies/ruby-2.6.1/bin/ruby -I /Users/jiams/.rvm/rubies/ruby-2.6.1/lib/ruby/site_ruby/2.6.0 -r ./siteconf20200504-42269-1wf7qj3.rb extconf.rb
+current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/bootsnap-1.4.6/ext/bootsnap
+/Users/jiams/.rvm/rubies/ruby-2.6.1/bin/ruby -I /Users/jiams/.rvm/rubies/ruby-2.6.1/lib/ruby/site_ruby/2.6.0 -r ./siteconf20200507-94743-1a8zj98.rb extconf.rb
 creating Makefile
 
-current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/bootsnap-1.4.6/ext/bootsnap
+current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/bootsnap-1.4.6/ext/bootsnap
 make "DESTDIR=" clean
 
-current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/bootsnap-1.4.6/ext/bootsnap
+current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/bootsnap-1.4.6/ext/bootsnap
 make "DESTDIR="
 compiling bootsnap.c
 linking shared-object bootsnap/bootsnap.bundle
 
-current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/bootsnap-1.4.6/ext/bootsnap
+current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/bootsnap-1.4.6/ext/bootsnap
 make "DESTDIR=" install
-/usr/local/opt/coreutils/bin/ginstall -c -m 0755 bootsnap.bundle ./.gem.20200504-42269-1otr9z9/bootsnap
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 bootsnap.bundle ./.gem.20200507-94743-1mntm94/bootsnap

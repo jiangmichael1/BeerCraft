@@ -1,5 +1,5 @@
 <%= form_for :session do |f| %>
-<%= f.label :name %>
+<%= f.label :name, value="Username" %>
 <%= f.text_field :name %>
 
 <%= f.label :password %>
@@ -7,4 +7,8 @@
 
 <%= f.submit "Sign In" %>
 
+<% end %>
+<%=link_to "Register", new_user_path%>
+<% if flash[:error]%>
+    <%= flash[:error] %>
 <% end %>

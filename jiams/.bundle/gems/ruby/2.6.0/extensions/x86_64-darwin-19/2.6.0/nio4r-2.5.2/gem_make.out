@@ -1,5 +1,5 @@
-current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/nio4r-2.5.2/ext/nio4r
-/Users/jiams/.rvm/rubies/ruby-2.6.1/bin/ruby -I /Users/jiams/.rvm/rubies/ruby-2.6.1/lib/ruby/site_ruby/2.6.0 -r ./siteconf20200504-42269-1ae6m5z.rb extconf.rb
+current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/nio4r-2.5.2/ext/nio4r
+/Users/jiams/.rvm/rubies/ruby-2.6.1/bin/ruby -I /Users/jiams/.rvm/rubies/ruby-2.6.1/lib/ruby/site_ruby/2.6.0 -r ./siteconf20200507-94743-xa9vxr.rb extconf.rb
 checking for unistd.h... yes
 checking for linux/aio_abi.h... no
 checking for sys/select.h... yes
@@ -11,10 +11,10 @@ checking for port_event_t in port.h... no
 checking for sys/resource.h... yes
 creating Makefile
 
-current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/nio4r-2.5.2/ext/nio4r
+current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/nio4r-2.5.2/ext/nio4r
 make "DESTDIR=" clean
 
-current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/nio4r-2.5.2/ext/nio4r
+current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/nio4r-2.5.2/ext/nio4r
 make "DESTDIR="
 compiling bytebuffer.c
 compiling monitor.c
@@ -90,6 +90,6 @@ In file included from nio4r_ext.c:7:
 compiling selector.c
 linking shared-object nio4r_ext.bundle
 
-current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/nio4r-2.5.2/ext/nio4r
+current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/nio4r-2.5.2/ext/nio4r
 make "DESTDIR=" install
-/usr/local/opt/coreutils/bin/ginstall -c -m 0755 nio4r_ext.bundle ./.gem.20200504-42269-1j5b14o
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 nio4r_ext.bundle ./.gem.20200507-94743-1qw9o17
