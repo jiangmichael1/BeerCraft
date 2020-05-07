@@ -1,7 +1,11 @@
+
 <h1> All Cocktails </h1>
 
 <%= link_to "User's List", users_path%> -- <%= link_to "Product's List", products_path%>
 
 <% @drinks.each do |drink| %>
-    <p><%= link_to "#{drink.name}", drink_path(drink)%></p>
+    <p><%= link_to "#{drink.name}", drink_path(drink)%>
+        <p><%= drink.votes_for.size %> <%= 
+            (drink.votes_for.size) == 1 ? 'Like' : 'Likes' %></p>
+    </p>
 <% end %>

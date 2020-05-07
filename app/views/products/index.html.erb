@@ -2,6 +2,10 @@
 <%= link_to "User's List", users_path%> -- <%= link_to "Drink's List", drinks_path%>
 
 <% @products.each do |p| %>
+
+
     <h3><%= link_to p.name, product_path(p) %></h3>
     <p><%= p.price%></p>
+        <%= link_to "Add to cart", add_path(p) %>
+
 <% end %>

@@ -5,7 +5,7 @@ class User < ApplicationRecord
     has_many :drinks, through: :user_drinks
     has_many :product_drinks
     has_secure_password
-
+    acts_as_voter
 
     validates :age, numericality: {greater_than_or_equal_to: 21}
     validates :name, presence: true
@@ -16,15 +16,18 @@ class User < ApplicationRecord
     @mine.all.each do |userdrink|
         userdrink.drink.name
     end
+
+    def votedfor
+    @drinks = self.find_up_voted_items
+    end
     end
 
     def my_cart
-      #  mycart = UserProduct.where(user_id: self)
-      #  mycart.products.name
-      @myproducts = UserProduct.where(user_id: self.id)
-      @myproducts.all.each do |userproduct|
-          userproduct.product.name
-      end
+        @myproducts = UserProduct.where(user_id: self.id)
+        @myproducts.all.each do |userproduct|
+            userproduct.product.name
+        end
     end
+
 
 end

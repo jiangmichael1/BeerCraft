@@ -1,8 +1,13 @@
 <h1><%= @drink.name %></h1>
 
-<p>&hearts;<%=" #{@drink.likes} people like this." %></p>
+
+<p><%= @drink.votes_for.size %>
+<%= (@drink.votes_for.size) == 1 ? 'Like' : 'Likes' %></p>
+<%= button_to 'Like', like_drink_path(@drink), method: :put %>
 
 <h2>Recipe</h2>
 
 <p><%= @drink.recipe %><p>
 <%= link_to "Back to Cocktails List", drinks_path%>
+
+
