@@ -1,10 +1,8 @@
 <h1> Products Index </h1>
-<%= link_to "User's List", users_path%> -- <%= link_to "Drink's List", drinks_path%>
+<%= link_to "User's List", users_path%> -- <%= link_to "Drink's List", drinks_path%> -- <%= link_to "My Profile", user_path(session[:user_id])%>
 
 <% @products.each do |p| %>
 <li>
-
-
     <h3><%= link_to p.name, product_path(p) %></h3>
     <p><%= p.price%></p>
         <%= link_to "Add to cart", add_path(p) %>

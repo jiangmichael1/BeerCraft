@@ -1,5 +1,5 @@
-current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/puma-4.3.3/ext/puma_http11
-/Users/jiams/.rvm/rubies/ruby-2.6.1/bin/ruby -I /Users/jiams/.rvm/rubies/ruby-2.6.1/lib/ruby/site_ruby/2.6.0 -r ./siteconf20200504-42269-e8nrmx.rb extconf.rb
+current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/puma-4.3.3/ext/puma_http11
+/Users/jiams/.rvm/rubies/ruby-2.6.1/bin/ruby -I /Users/jiams/.rvm/rubies/ruby-2.6.1/lib/ruby/site_ruby/2.6.0 -r ./siteconf20200507-94743-18w6ll8.rb extconf.rb
 checking for BIO_read() in -lcrypto... yes
 checking for SSL_CTX_new() in -lssl... yes
 checking for openssl/bio.h... yes
@@ -8,10 +8,10 @@ checking for TLS_server_method() in openssl/ssl.h... yes
 checking for SSL_CTX_set_min_proto_version in openssl/ssl.h... yes
 creating Makefile
 
-current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/puma-4.3.3/ext/puma_http11
+current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/puma-4.3.3/ext/puma_http11
 make "DESTDIR=" clean
 
-current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/puma-4.3.3/ext/puma_http11
+current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/puma-4.3.3/ext/puma_http11
 make "DESTDIR="
 compiling http11_parser.c
 ext/puma_http11/http11_parser.c:44:18: warning: unused variable 'puma_parser_en_main' [-Wunused-const-variable]
@@ -35,6 +35,6 @@ puma_http11.c:203:22: note: include the header <ctype.h> or explicitly provide a
 1 warning generated.
 linking shared-object puma/puma_http11.bundle
 
-current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/puma-4.3.3/ext/puma_http11
+current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/puma-4.3.3/ext/puma_http11
 make "DESTDIR=" install
-/usr/local/opt/coreutils/bin/ginstall -c -m 0755 puma_http11.bundle ./.gem.20200504-42269-zz7hoc/puma
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 puma_http11.bundle ./.gem.20200507-94743-wuhphw/puma

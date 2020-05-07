@@ -1,11 +1,11 @@
-current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/sassc-2.3.0/ext
-/Users/jiams/.rvm/rubies/ruby-2.6.1/bin/ruby -I /Users/jiams/.rvm/rubies/ruby-2.6.1/lib/ruby/site_ruby/2.6.0 -r ./siteconf20200504-42269-1vplzw.rb extconf.rb
+current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/sassc-2.3.0/ext
+/Users/jiams/.rvm/rubies/ruby-2.6.1/bin/ruby -I /Users/jiams/.rvm/rubies/ruby-2.6.1/lib/ruby/site_ruby/2.6.0 -r ./siteconf20200507-94743-1a00mt8.rb extconf.rb
 creating Makefile
 
-current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/sassc-2.3.0/ext
+current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/sassc-2.3.0/ext
 make "DESTDIR=" clean
 
-current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/sassc-2.3.0/ext
+current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/sassc-2.3.0/ext
 make "DESTDIR="
 compiling ./libsass/src/ast.cpp
 compiling ./libsass/src/ast2c.cpp
@@ -77,6 +77,6 @@ compiling ./libsass/src/util_string.cpp
 compiling ./libsass/src/values.cpp
 linking shared-object sassc/libsass.bundle
 
-current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/sassc-2.3.0/ext
+current directory: /Users/jiams/Flatiron/Mod_2/ShakenNotStirred/jiams/.bundle/gems/ruby/2.6.0/gems/sassc-2.3.0/ext
 make "DESTDIR=" install
-/usr/local/opt/coreutils/bin/ginstall -c -m 0755 libsass.bundle ./.gem.20200504-42269-1bq9gnc/sassc
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 libsass.bundle ./.gem.20200507-94743-1n3kvvb/sassc
