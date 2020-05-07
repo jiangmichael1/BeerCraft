@@ -1,6 +1,8 @@
-<h1>Users List</h1>
-<%= link_to "Drink's List", drinks_path%> -- <%= link_to "Product's List", products_path%> -- <%= link_to "My Profile", user_path(session[:user_id])%>
+<div class="user_container">
+    <h1 style="text-align: center">Users List</h1>
 
-<% @users.each do |u| %>
-    <h3><%= link_to u.name, user_path(u)%></h3>
-<% end %>
+
+    <% @users.each do |u| %>
+        <h3 style="text-align: center"><%= link_to u.name, user_path(u)%></h3>
+    <% end %>
+</div>

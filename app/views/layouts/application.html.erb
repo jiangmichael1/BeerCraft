@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ShakenNotStirred</title>
+    <title>Beer Craft</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,14 @@
   </head>
 
   <body>
+  
+    <ul>
+    <div class="nav_text">
+      <li><%= link_to "User's", users_path%></li>
+      <li><%= link_to "Beers", drinks_path%></li>
+      <li><%= link_to "Ingredients", products_path%></li>
+    </div>
+    </ul>
     
     <%= yield %>
   </body>

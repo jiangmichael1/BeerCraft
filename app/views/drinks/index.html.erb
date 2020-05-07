@@ -1,11 +1,14 @@
-
-<h1> All Cocktails </h1>
-
-<%= link_to "User's List", users_path%> -- <%= link_to "Product's List", products_path%> -- <%= link_to "My Profile", user_path(session[:user_id])%>
-
-<% @drinks.each do |drink| %>
-    <p><%= link_to "#{drink.name}", drink_path(drink)%>
-        <p><%= drink.votes_for.size %> <%= 
-            (drink.votes_for.size) == 1 ? 'Like' : 'Likes' %></p>
-    </p>
-<% end %>
+<div class="container">
+<br>
+    <h1 style="text-align: center"> All Beers </h1>
+    <div class="index-container">
+    <% @drinks.each do |drink| %>
+        <div class="index-tile">
+            <p><%= link_to "#{drink.name}", drink_path(drink)%>
+            <p><%= drink.votes_for.size %> <%= 
+                (drink.votes_for.size) == 1 ? 'Like' : 'Likes' %></p>
+        </p>
+        </div>
+    <% end %>
+    </div>
+</div>
