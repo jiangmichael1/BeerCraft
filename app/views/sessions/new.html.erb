@@ -1,14 +1,22 @@
-<%= form_for :session do |f| %>
-<%= f.label :name, value="Username" %>
-<%= f.text_field :name %>
 
-<%= f.label :password %>
-<%= f.text_field :password %>
+<div class="container">
+    <%=link_to "Register", new_user_path%>
+    <br>
+    <br>
+    <%= form_for :session do |f| %>
+    <%= f.label :name, value="Username" %>
+    <%= f.text_field :name %>
 
-<%= f.submit "Sign In" %>
+    <%= f.label :password %>
+    <%= f.text_field :password %>
 
-<% end %>
-<%=link_to "Register", new_user_path%>
-<% if flash[:error]%>
-    <%= flash[:error] %>
-<% end %>
+    <%= f.submit "Sign In" %>
+
+    <% end %>
+    <br>
+    <% if flash[:error]%>
+        <%= flash[:error] %>
+    <% end %>
+</div>
+
+

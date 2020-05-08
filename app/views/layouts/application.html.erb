@@ -4,7 +4,11 @@
     <title>Beer Craft</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display">
+    <style>
+    h1 {font-family: "Roboto", sans-serif}
+    body, h2, h3, h4, h5, h6 {font-family: "Playfair Display", serif}
+    </style>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -12,13 +16,17 @@
   <body>
   
     <ul>
+   
     <div class="nav_text">
       <li><%= link_to "User's", users_path%></li>
       <li><%= link_to "Beers", drinks_path%></li>
       <li><%= link_to "Ingredients", products_path%></li>
+      <li><%= link_to "My Profile", user_path(session[:user_id]) %></li>
     </div>
+
     </ul>
     
     <%= yield %>
   </body>
+
 </html>

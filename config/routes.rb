@@ -23,6 +23,7 @@ end
   post '/sessions/login', to: 'sessions#create'
   delete '/sessions/logout', to: 'sessions#destroy', as: "log_out_session"
   get '/products/:id/add', to: 'products#add_to_cart', as: "add"
+  get '/welcome', to: 'sessions#launchpad', as: 'launchpad'
   
 
 

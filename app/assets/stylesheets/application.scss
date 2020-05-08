@@ -13,64 +13,110 @@
  *= require_tree .
  *= require_self
  */
+ 
+body:not(.landingpage){
+     background: url("https://images.unsplash.com/photo-1569092433665-20d853fd0934?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80") no-repeat center center fixed;
+     background-size: cover;
+ }
 
- body {
+
+body{
     background: url('https://i.ibb.co/ZdfnTLz/beers.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
- }
- 
- .nav {
+}
+
+.logo {
+    display: block;
+    margin-left:135px;
+    margin-right: auto;
+    margin-top: 0px;
+    width: 50%;
+}
+
+.darken {
+    background-color:none;
+    display: inline-block;
+    margin-left: 135px;
+    margin-top: 85px;
+}
+
+.darken img:hover{
+    opacity: .7;
+}
+
+.nav {
      background: grey;
-    }
+    
+}
 
 ul {
-        background-color: #e6dbc9;
-        margin: 0px auto;
-        margin-bottom: 10px;
-        
-        width: 23%;
-        vertical-align: middle;
-        border-radius: 20px;
-    }
+    background-color: rgba(230,219,201, 0.70);
+    margin-bottom: 10px;
+    width: 100%;
+    vertical-align: middle;
+    position: relative;
+    top: -70px;
+    transition: 0.3s;
+}
+
     
 ul li{
     display: inline-block;
     padding: 20px;
-    color: #e6dbc9;
-    
+    color: #e6dbc9;   
 }
 
+ul:hover{
+    top: -15px;
+}
 
 li:hover {
-    background-color: #8A7B75;
+    background-color: #ce9e62;
     transition-duration: 0.5s;
 }
 
 a{
-    text-decoration: none;  
+    text-decoration: none;
+    color: #c1432e;
+    font-size: 22px;
 }
 
 .nav_text{
     text-decoration: none;
-    color: #c53211;
+    text-align: center;
+    
 }
 
 .container{
     background-color: rgba(230,219,201, 0.70);
-    border-radius: 10px;
+    border-radius: 0px;
     margin: 0px auto;
-
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    padding: 3%;
+    text-align: center;
 }
 
 .user_container{
     background-color: rgba(230,219,201, 0.70);
     border-radius: 10px;
     margin: 0px auto;
-    width: 30%
+    width: 25%;
 }
+
+.profile_container{
+    background-color: rgba(230,219,201, 0.70);
+    border-radius: 10px;
+    margin: 0px auto;
+    padding: 5%;
+    width: 30%;
+    text-align: center;
+}
+
 .index-container {
     display: flex;
     flex-flow: row wrap;
@@ -85,6 +131,15 @@ a{
     border-radius: 25px;
     padding: 10px;
     margin: 5px;
+}
+
+.beer_container {
+    background-color: rgba(230,219,201, 0.70);
+    border-radius: 10px;
+    margin: 0px auto;
+    width: 25%;
+    text-align: center;
+    padding: 10px;
 }
 
 

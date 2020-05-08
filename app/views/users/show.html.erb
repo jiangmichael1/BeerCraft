@@ -1,29 +1,30 @@
-<h1><%="#{@user.name}'s Profile" %></h1>
+<div class="profile_container">
+  <h1><%="#{@user.name}'s Profile" %></h1>
 
-<p><%= @user.name %></p>
-<p><%= @user.age %></p>
+  <p><%= @user.name %></p>
+  <p><%= @user.age %></p>
 
 
-<h2>Liked Drinks</h2>
+  <h2>Liked Drinks</h2>
 
-  <% if @user.my_drinks.empty? %>
-      <p><%= "You haven't saved any drinks yet." %></p>
-        <% else %>
-      <% @user.votedfor.each do |mine| %>
-      <p><%= link_to mine.name, drink_path(mine.id)%></p>
+    <% if @user.my_drinks.empty? %>
+        <p><%= "You haven't saved any drinks yet." %></p>
+          <% else %>
+        <% @user.votedfor.each do |mine| %>
+        <p><%= link_to mine.name, drink_path(mine.id)%></p>
+      <% end %>
+    <p><%= link_to Drink.all.sample.name, drink_path%></p>
     <% end %>
-  <p><%= link_to Drink.all.sample.name, drink_path%></p>
-  <% end %>
 
-<h2>Shopping List</h2>
-    
-    <% if @user.my_cart.empty? %>
-    <p><%= "Your list is empty!" %></p>
-    <% else %>
-      <% @user.my_cart.each do |userproduct| %>
-      <p><%= link_to "#{userproduct.product.name}: $#{userproduct.product.price}", product_path(userproduct.product.id)%></p>
+  <h2>Shopping List</h2>
+      
+      <% if @user.my_cart.empty? %>
+      <p><%= "Your list is empty!" %></p>
+      <% else %>
+        <% @user.my_cart.each do |userproduct| %>
+        <p><%= link_to "#{userproduct.product.name}: $#{userproduct.product.price}", product_path(userproduct.product.id)%></p>
 
-    <% end %>
-    <% end %>
-<br>
-<%= link_to "View Users", users_path%> -- <%= link_to "View Products", products_path%>--<%= link_to "View Drinks", drinks_path%>
+      <% end %>
+      <% end %>
+  <br>
+  </div>

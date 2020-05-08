@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
 
     def create
     @user = User.find_by(name: params[:session][:name])
-        if @user && @user.authenticate(params[session][:password])
+        if @user && @user.authenticate(params[:session][:password])
             session[:user_id] = @user.id
             redirect_to user_path(@user)
         else
@@ -18,6 +18,9 @@ class SessionsController < ApplicationController
     def destroy
     session[:user_id] = nil
     redirect_to user_path
+    end
+
+    def launchpad
     end
 
 end
